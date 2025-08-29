@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Product Search</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🛒 Product Search</h1>
+
+        <!-- Search Section -->
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="Search products...">
+            <button onclick="searchProducts()">Search</button>
+        </div>
+
+        <!-- Filters & Sorting -->
+        <div class="filters">
+            <div class="filter-group">
+                <label for="sortOption">Sort by:</label>
+                <select id="sortOption">
+                    <option value="name">Name (A-Z)</option>
+                    <option value="priceAsc">Price (Low to High)</option>
+                    <option value="priceDesc">Price (High to Low)</option>
+                </select>
+            </div>
+
+            <div class="filter-group">
+                <label for="categoryFilter">Filter by Category:</label>
+                <select id="categoryFilter">
+                    <option value="">All</option>
+                    <option value="Electronics">Electronics</option>
+                    <option value="Clothing">Clothing</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Results -->
+        <div id="results" class="results"></div>
+
+        <!-- Pagination -->
+        <div class="pagination">
+            <button onclick="prevPage()" disabled>Previous</button>
+            <button onclick="nextPage()">Next</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

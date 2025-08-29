@@ -1,0 +1,151 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f2f2f2;
+    color: #111;
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+/* Title */
+h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    font-weight: 600;
+    color: #232f3e;
+}
+
+/* Search bar */
+.search-bar {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.search-bar input {
+    flex: 1;
+    padding: 12px;
+    font-size: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.search-bar button {
+    background: #febd69; /* Amazon orange */
+    color: #111;
+    font-weight: bold;
+    border: 1px solid #f0a847;
+    border-radius: 4px;
+    padding: 12px 18px;
+    cursor: pointer;
+    transition: background 0.2s ease-in-out;
+}
+
+.search-bar button:hover {
+    background: #f3a847;
+}
+
+/* Filters */
+.filters {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.filter-group label {
+    font-weight: bold;
+    margin-right: 8px;
+}
+
+/* Selects */
+select {
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+/* Results grid */
+.results {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 20px;
+}
+
+/* Product card */
+.product-card {
+    background: #fff;
+    padding: 16px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+    cursor: pointer;
+}
+
+.product-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Product title */
+.product-card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+    color: #007185; /* Amazon link blue */
+    cursor: pointer;
+}
+
+.product-card h3:hover {
+    text-decoration: underline;
+}
+
+/* Product description */
+.product-card p {
+    font-size: 0.9rem;
+    margin: 4px 0;
+    color: #333;
+}
+
+/* Price */
+.product-card strong {
+    color: #B12704; /* Amazon red price */
+    font-size: 1rem;
+}
+
+/* Pagination */
+.pagination {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.pagination button {
+    margin: 0 5px;
+    padding: 10px 16px;
+    border: 1px solid #ccc;
+    background: #fff;
+    cursor: pointer;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: background 0.2s ease-in-out;
+}
+
+.pagination button:hover:not(:disabled) {
+    background: #eee;
+}
+
+.pagination button:disabled {
+    color: #aaa;
+    cursor: not-allowed;
+}
